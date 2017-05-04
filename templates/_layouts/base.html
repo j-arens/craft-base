@@ -1,0 +1,49 @@
+{# 
+# Base skeleton
+#
+# - Use {% extends '_layouts/base' %} in your templates
+# - Template content goes inside {% block main %} - {% endblock %}
+# - Optionally rewrite the entire template just by rewriting the blocks without calling {{ parent() }}
+#
+-#}
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        {% block head %}
+            <meta charset="utf-8">
+            <meta http-equiv="x-ua-compatible" content="ie-edge">
+            <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+            <meta name="description" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <link rel="apple-touch-icon" href="">
+            <link rel="stylesheet" href="{{ siteUrl }}public/styles/style.min.css">
+        {% endblock %}
+    </head>
+    <body {% if bodyClass is defined %}class="{{ bodyClass }}"{% endif %}>
+
+        <!-- warn IE users to upgrade to a better browser -->
+        <script type="text/javascript">
+            if (!(window.ActiveXObject) && 'ActiveXObject' in window) {
+                document.body.insertAdjacentHTML(
+                    'afterbegin', 
+                    '<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to view this site properly.<p>'
+                );
+            }
+        </script>
+        
+        <!-- header -->
+        {% embed '_partials/header.html' %}{% endembed %}
+        <!-- /header -->
+
+        <!-- main -->
+        <main id="main" role="main">
+            {% block main %}{% endblock %}
+        </main>
+        <!-- /main -->
+
+        <!-- footer -->
+        {% embed '_partials/footer.html' %}{% endembed %}
+        <!-- /footer -->
+ 
+    </body>
+</html>

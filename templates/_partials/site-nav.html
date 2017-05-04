@@ -1,0 +1,34 @@
+{# Nav partial -#}
+
+{% set navItems = {
+    'home': 'Home',
+    'about-us': 'About Us',
+    'news': 'News',
+    'events': 'Events',
+    'contact': 'Contact'
+ } %}
+
+<nav id="site-nav">
+    {% block sitenav %}
+        <button class="site-nav__mobile-toggle">
+            <svg class="site-nav__hamburger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                <path d="M0 8 L24 8"></path>
+                <path class="site-nav__hamburger_focus-line" d="M0 8 L24 8"></path>
+                <circle cx="29" cy="8" r="1"></circle>
+                <circle class="site-nav__hamburger_focus-circle" cx="29" cy="8" r="1"></circle>
+                <path d="M0 16 L32 16"></path>
+                <path class="site-nav__hamburger_focus-line" d="M0 16 L32 16"></path>
+                <path d="M0 24 L32 24"></path>
+                <path class="site-nav__hamburger_focus-line" d="M0 24 L32 24"></path>
+            </svg>
+            Menu
+        </button>
+        <ul class="site-nav__menu">
+            {% for slug, item in navItems %}
+                <li class="site-nav__item {% if craft.request.firstSegment == slug %}site-nav__item-active{% endif %}">
+                    <a class="site-nav__item-link" href="{{ url(slug) }}"><a/>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endblock %}
+</nav>

@@ -1,0 +1,50 @@
+@import '../variables/_grid';
+
+.container,
+.container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: calc(var(--gutter-width) / 2);
+  padding-right: calc(var(--gutter-width) / 2);
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@media screen and (--breakpoint-sm) {
+  .container {
+    max-width: var(--container-sm-mw);
+  }
+}
+
+@media screen and (--breakpoint-md) {
+  .container {
+    max-width: var(--container-md-mw);
+  }
+}
+
+@media screen and (--breakpoint-lg) {
+  .container {
+    max-width: var(--container-lg-mw);
+  }
+}
+
+@media screen and (--breakpoint-xl) {
+  .container {
+    max-width: var(--container-xl-mw);
+  }
+}
+
+@media screen and (--breakpoint-xw) {
+  .container {
+    max-width: var(--container-xw-mw);
+  }
+}
+
+@media screen and (--breakpoint-full) {
+  .container {
+    max-width: var(--container-full);
+  }
+}

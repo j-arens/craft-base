@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:200,400,500');
+
+:root {
+    --colorBodyText: #3b3b3b;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.45;
+    color: var(--colorBodyText);
+}
+
+@custom-selector :--headings h1, h2, h3, h4, h5, h6;
+
+:--headings {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.998em;
+}
+
+h2 {
+    font-size: 2.827em;
+}   
+
+h3 {
+    font-size: 1.999em;
+}
+
+h4 {
+    font-size: 1.414em;
+}
+
+p {
+    margin-bottom: 1.3em;
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.font-regular {
+    font-weight: 400;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-bold {
+    font-weight: 600;
+}

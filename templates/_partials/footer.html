@@ -1,0 +1,14 @@
+{# 
+# Footer partial
+#
+# - Gets included in base.html
+# - You can override the markup within the {% block footer %} and {% endblock %} by extending it.
+# - You can extend the footer partial by using {% extends 'footer.html' %} at the top of your file.
+# - Calling {{ parent() }} at the top of your extension will output the contents within this files block into your extension.
+# 
+-#}
+
+<footer id="site-footer">
+    {% block footer %}
+    {% endblock %}
+</footer>

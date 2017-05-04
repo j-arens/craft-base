@@ -1,0 +1,188 @@
+@import '../variables/_grid';
+
+*[class*="col-"] {
+  position: relative;
+  min-height: 1px;
+  padding-right: calc(var(--gutter-width) / 2);
+  padding-left: calc(var(--gutter-width) / 2);
+  float: left;
+}
+
+.pull-xs-0,
+.pull-sm-0,
+.pull-lg-0,
+.pull-xl-0 {
+  right: auto;
+}
+
+.push-xs-0,
+.push-sm-0,
+.push-lg-0,
+.push-xl-0 {
+  left: auto;
+}
+
+
+.offset-xs-half {
+  margin-left: calc((.5 / 12) * 100)%;
+}
+
+.offset-xs-quarter {
+  margin-left: calc((.25 / 12) * 100)%;
+}
+
+.pull-xs-quarter {
+    right: calc((.25 / 12) * 100)%;
+  }
+
+  .push-xs-quarter {
+    left: calc((.25 / 12) * 100)%;
+  }
+
+@for $i from 0 to 12 {
+  .col-xs-$i { width: calc(($(i) / 12) * 100)%; }
+  .col-xs-$(i)-quarter { width: calc((($(i) - .25) / 12) * 100)%; }
+  .col-xs-$(i)-half { width: calc((($(i) - .5) / 12) * 100)%; }
+  .pull-xs-$i { right: calc(($(i) / 12) * 100)%; }
+  .push-xs-$i { left: calc(($(i) / 12) * 100)%; }
+  .offset-xs-$i { margin-left: calc(($(i) / 12) * 100)%; }
+}
+
+
+@media screen and (--breakpoint-sm) {
+  .offset-sm-half {
+    margin-left: calc((.5 / 12) * 100)%;
+  }
+
+  .offset-sm-quarter {
+    margin-left: calc((.25 / 12) * 100)%;
+  }
+
+  .pull-sm-quarter {
+    right: calc((.25 / 12) * 100)%;
+  }
+
+  .push-sm-quarter {
+    left: calc((.25 / 12) * 100)%;
+  }
+
+  @for $i from 0 to 12 {
+    .col-sm-$i { width: calc(($(i) / 12) * 100)%; }
+    .col-sm-$(i)-quarter { width: calc((($(i) - .25) / 12) * 100)%; }
+    .pull-sm-$(i)-half { right: calc((($(i) - .5) / 12) * 100)%; }
+    .pull-sm-$i { right: calc(($(i) / 12) * 100)%; }
+    .push-sm-$i { left: calc(($(i) / 12) * 100)%; }
+    .offset-sm-$i { margin-left: calc(($(i) / 12) * 100)%; }
+  }
+}
+
+
+@media screen and (--breakpoint-md) {
+  .offset-md-half {
+    margin-left: calc((.5 / 12) * 100)%;
+  }
+
+  .offset-md-quarter {
+    margin-left: calc((.25 / 12) * 100)%;
+  }
+
+  .pull-md-quarter {
+    right: calc((.25 / 12) * 100)%;
+  }
+
+  .push-md-quarter {
+    left: calc((.25 / 12) * 100)%;
+  }
+
+  @for $i from 0 to 12 {
+    .col-md-$i { width: calc(($(i) / 12) * 100)%; }
+    .col-md-$(i)-quarter { width: calc((($(i) - .25) / 12) * 100)%; }
+    .col-md-$(i)-half { width: calc((($(i) - .5) / 12) * 100)%; }
+    .pull-md-$i { right: calc(($(i) / 12) * 100)%; }
+    .push-md-$i { left: calc(($(i) / 12) * 100)%; }
+    .offset-md-$i { margin-left: calc(($(i) / 12) * 100)%; }
+  }
+}
+
+
+@media screen and (--breakpoint-lg) {
+  .offset-lg-half {
+    margin-left: calc((.5 / 12) * 100)%;
+  }
+
+  .offset-lg-quarter {
+    margin-left: calc((.25 / 12) * 100)%;
+  }
+
+  .pull-lg-quarter {
+    right: calc((.25 / 12) * 100)%;
+  }
+
+  .push-lg-quarter {
+    left: calc((.25 / 12) * 100)%;
+  }
+
+  @for $i from 0 to 12 {
+    .col-lg-$i { width: calc(($(i) / 12) * 100)%; }
+    .col-lg-$(i)-quarter { width: calc((($(i) - .25) / 12) * 100)%; }
+    .col-lg-$(i)-half { width: calc((($(i) - .5) / 12) * 100)%; }
+    .pull-lg-$i { right: calc(($(i) / 12) * 100)%; }
+    .push-lg-$i { left: calc(($(i) / 12) * 100)%; }
+    .offset-lg-$i { margin-left: calc(($(i) / 12) * 100)%; }
+  }
+}
+
+
+@media screen and (--breakpoint-xl) {
+  .offset-xl-half {
+    margin-left: calc((.5 / 12) * 100)%;
+  }
+
+  .offset-xl-quarter {
+    margin-left: calc((.25 / 12) * 100)%;
+  }
+
+  .pull-xl-quarter {
+    right: calc((.25 / 12) * 100)%;
+  }
+
+  .push-xl-quarter {
+    left: calc((.25 / 12) * 100)%;
+  }
+
+  @for $i from 0 to 12 {
+    .col-xl-$i { width: calc(($(i) / 12) * 100)%; }
+    .col-xl-$(i)-quarter { width: calc((($(i) - .25) / 12) * 100)%; }
+    .col-xl-$(i)-half { width: calc((($(i) - .5) / 12) * 100)%; }
+    .pull-xl-$i { right: calc(($(i) / 12) * 100)%; }
+    .push-xl-$i { left: calc(($(i) / 12) * 100)%; }
+    .offset-xl-$i { margin-left: calc(($(i) / 12) * 100)%; }
+  }
+}
+
+@media screen and (--breakpoint-xw) {
+  .offset-xw-half {
+    margin-left: calc((.5 / 12) * 100)%;
+  }
+
+  .offset-xw-quarter {
+    margin-left: calc((.25 / 12) * 100)%;
+  }
+
+  .pull-xw-quarter {
+    right: calc((.25 / 12) * 100)%;
+  }
+
+  .push-xw-quarter {
+    left: calc((.25 / 12) * 100)%;
+  }
+
+  @for $i from 0 to 12 {
+    .col-xw-$i { width: calc(($(i) / 12) * 100)%; }
+    .col-xw-$(i)-quarter { width: calc((($(i) - .25) / 12) * 100)%; }
+    .col-xw-$(i)-half { width: calc((($(i) - .5) / 12) * 100)%; }
+    .pull-xw-$i { right: calc(($(i) / 12) * 100)%; }
+    .push-xw-$i { left: calc(($(i) / 12) * 100)%; }
+    .offset-xw-$i { margin-left: calc(($(i) / 12) * 100)%; }
+  }
+}

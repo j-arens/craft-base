@@ -1,0 +1,21 @@
+:root {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+*, 
+*::before, 
+*::after {
+    box-sizing: inherit;
+}
