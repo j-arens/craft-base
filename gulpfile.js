@@ -28,8 +28,8 @@ const imagemin = require('gulp-imagemin');
 const env = {
     migrate: argv.migrate || false,
     devUrl: 'localhost',
-    craftDistPath: 'C:/xampp/craft',
-    publicDistPath: 'C:/xampp/htdocs'
+    craftDistPath: '/var/www/craft',
+    publicDistPath: '/var/www/html'
 }
 
 /**
@@ -132,8 +132,8 @@ gulp.task('bsync', () => {
         proxy: env.devUrl
     });
 
-    gulp.watch(env.craftDistPath + '/templates/**/*.html').on('change', bsync.reload());
-    gulp.watch(env.publicDistPath + '/**/*').on('change', bsync.reload());
+    gulp.watch(env.craftDistPath + '/templates/**/*.html').on('change', bsync.reload);
+    gulp.watch(env.publicDistPath + '/**/*').on('change', bsync.reload);
 });
 
 /**
